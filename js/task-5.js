@@ -3,33 +3,34 @@
 let userCountry = prompt('Введите страну доставки:');
 let price;
 let correctCountry = '';
-for (let i = 0; i < userCountry.length; i++) {
-    if (i === 0) {
-        correctCountry += userCountry[i].toUpperCase();
-    }
-    else {
-        correctCountry += userCountry[i].toLowerCase();
-    }
-}
+
+correctCountry = userCountry[0].toUpperCase() + userCountry.slice(1).toLowerCase();
+
+const countryFirst = 'Китай';
+const countrySecond = 'Чили';
+const countryThird = 'Австралия';
+const countryFour = 'Индия';
+const countryFive = 'Ямайка';
+
 
 switch (correctCountry) {
-    case 'Китай':
+    case countryFirst:
         price = 100;
         break;
 
-    case 'Чили':
+    case countrySecond:
         price = 250;
         break;
 
-    case 'Австралия':
+    case countryThird:
         price = 170;
         break;
 
-    case 'Индия':
+    case countryFour:
         price = 80;
         break;
 
-    case 'Ямайка':
+    case countryFive:
         price = 120;
         break;
 

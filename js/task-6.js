@@ -3,16 +3,13 @@
 let input;
 let total = 0;
  
-while (input !== null) {
+ do{
     input = prompt('Введите число');
-    if (input !== null) {
-        let number = (Number(input));
-         if (Number.isNaN(number)) {
+         if (Number.isNaN(Number(input))) {
             alert('Было введено не число, попробуйте еще раз');
         }
         else {
-            total += number;
+            total += Number(input);
         }
-    }
-}
+}while (input !== null)
 alert(`Общая сумма чисел равна ${total}`);
